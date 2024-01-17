@@ -1,0 +1,9 @@
+{
+    "name": "Foolproof",
+    "description": "You take no fall damaage.",
+    "type": "origins:invulnerability",
+    "damage_condition": {
+      "type": "origins:name",
+      "name": "fall"
+    }
+  }

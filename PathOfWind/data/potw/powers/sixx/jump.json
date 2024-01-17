@@ -1,0 +1,13 @@
+{
+    "name": "High-Jump",
+    "description": "You jump higher while sprinting, what an athlete!",
+    "type": "origins:modify_jump",
+    "modifier": {
+      "name": "Bonus jump force while sprinting",
+      "value": 0.5,
+      "operation": "multiply_base"
+    },
+    "condition": {
+      "type": "origins:sprinting"
+    }
+  }

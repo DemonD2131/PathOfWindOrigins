@@ -1,0 +1,32 @@
+{
+    "name": "Distribute Luck",
+    "description": "You give everyone your luck, leaving you with none.",
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:area_of_effect",
+        "radius": 6,
+        "bientity_action": {
+            "type": "origins:apply_effect",
+                "effect": {
+            "effect": "minecraft:luck",
+            "duration": 200,
+            "amplifier": 2,
+            "is_ambient": false,
+            "show_particles": false,
+            "show_icon": true
+        }
+        },
+        "bientity_condition": {
+            "type": "origins:target_condition",
+            "condition": {
+                "type": "origins:entity_type",
+                "entity_type": "minecraft:player"
+            }
+        }
+        
+    },
+    "interval": 100,
+    "condition": {
+        "type": "origins:simple"
+    }
+}

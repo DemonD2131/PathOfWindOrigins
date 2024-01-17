@@ -1,0 +1,16 @@
+{
+	"powers": [
+		"potw:sixx/aoe",
+		"potw:sixx/regen",
+		"potw:sixx/regen",
+		"potw:sixx/falldmg",
+		"potw:sixx/luck",
+		"potw:sixx/imperv",
+		"origins:scare_creepers"
+	],
+	"icon": "minecraft:rose",
+	"order": 10,
+	"impact": 0,
+	"name": "SixxofRoses",
+	"description": "YOUR WIFE LOVES YOU!!!"
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Impervious",
+    "description": "How could you possibly die now.",
+    "type": "origins:action_over_time",
+    "entity_action": {
+        "type": "origins:apply_effect",
+        "effect": {
+            "effect": "minecraft:regeneration",
+            "duration": 200,
+            "amplifier": 1,
+            "is_ambient": true,
+            "show_particles": false,
+            "show_icon": true
+        }
+    },
+    "interval": 100,
+    "condition": {
+    }
+}
