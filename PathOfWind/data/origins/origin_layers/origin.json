@@ -1,6 +1,6 @@
 {
-  "replace": true,
+  "replace": false,
   "origins": [
-    "potw:sixxofRoses"
+    "potw:six"
   ]
 }
