@@ -3,5 +3,6 @@
     "item_condition": {
         "type": "origins:food"
     },
-  "hidden": true
+    "name": "Broken Jaw",
+    "description": "Youre cursed malformities prevent you from eating."
 }

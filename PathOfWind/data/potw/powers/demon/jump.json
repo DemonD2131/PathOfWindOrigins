@@ -1,5 +1,28 @@
 {
+    
+    "name": "Leap",
+	"description": "You can perform a long jump by pressing [Primary] key, has 3 charges which restores over time.",
     "type": "origins:multiple",
+    "jump_cooldown":{
+        "type": "origins:action_over_time",
+        "interval": 240,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "potw:demon/jump_jump_count",
+            "change": 1
+        }
+    },
+    "jump_count":{
+            "type": "origins:resource",
+            "min": 0,
+            "max": 3,
+            "start_value": 3,
+            "hud_render": {
+                "should_render": true,
+                "sprite_location": "origins:textures/gui/resource_bar.png",
+                "bar_index": 5
+            }
+    },
     "jump": {
         "type": "origins:active_self",
         "entity_action": {

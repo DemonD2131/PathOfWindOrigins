@@ -1,0 +1,211 @@
+{
+    "name": "Demon Form",
+    "description": "Your violent tendecies are fully manifested in this form.",
+    "type": "origins:multiple",
+    "man_eater":{
+        "type": "origins:self_action_on_kill",
+            "entity_action": {
+                "type": "origins:feed",
+                "food": 4,
+                "saturation": 1
+            },
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
+            "bar_index": 4,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "potw:demon/mode",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        },
+        "cooldown": 600,
+        "name": "Man-Eating Demon",
+        "description": "Recover your satiation through violence",
+        "condition":{
+            "type": "origins:resource",
+            "resource": "potw:demon/mode",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "kill_count":{
+        "type": "origins:resource",
+        "min": 0,
+        "max": 300,
+        "start_value": 0,
+        "hud_render": {
+            "should_render": true,
+            "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_01.png",
+            "bar_index": 23,
+            "condition": {
+                "type": "origins:resource",
+                "resource": "potw:demon/mode",
+                "comparison": "==",
+                "compare_to": 0
+            }
+        }
+        
+    },
+    "kill_count_evolve":{
+        "type": "origins:self_action_on_kill",
+        "cooldown": 6,
+        "entity_action": {
+            "type": "origins:and",
+            "actions": [
+          {
+              "type": "origins:execute_command",
+                "command": "particle minecraft:soul ~ ~1 ~ 0 0.3 0 0.2 50 normal",
+                "permission_level": 4
+          },
+          {
+              "type": "origins:play_sound",
+                "sound": "minecraft:entity.illusioner.prepare_mirror"
+          }]
+        },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [{
+            "type": "origins:or",
+            "conditions": [
+            {
+                "type": "origins:resource",
+                "resource": "potw:demon/killer_kill_count",
+                "comparison": "==",
+                "compare_to": 99
+            },
+            {
+                "type": "origins:resource",
+                "resource": "potw:demon/killer_kill_count",
+                "comparison": "==",
+                "compare_to": 299
+            }]
+            },
+            {
+                "type": "origins:resource",
+                "resource": "potw:demon/mode",
+                "comparison": "==",
+                "compare_to": 0
+            }
+            ]
+        }
+    },
+    "kill_count_on_death":{
+        "type": "origins:action_on_callback",
+        "entity_action_respawned":	{
+            "type": "origins:change_resource",
+                "resource": "potw:demon/killer_kill_count",
+                "change": -300
+          }
+    },
+    "kill_count_on_kill":{
+        "type": "origins:self_action_on_kill",
+        "cooldown": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "potw:demon/killer_kill_count",
+            "change": 1
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "potw:demon/mode",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    },
+    "demonatkspeed":{
+        "type": "origins:conditioned_attribute",
+        "modifier": {
+            "attribute": "minecraft:generic.attack_speed",
+            "operation": "addition",
+            "value": 0.8
+        },
+        "tick_rate": 20,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:resource",
+                    "resource": "potw:demon/mode",
+                    "comparison": "==",
+                    "compare_to": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "potw:demon/killer_kill_count",
+                    "comparison": ">=",
+                    "compare_to": 150
+                }
+            ]
+        }
+    },
+    "uppermoon":{
+        "type": "origins:action_over_time",
+          "entity_action": {
+          "type": "origins:apply_effect",
+            "effects": [{
+                "effect":"minecraft:regeneration",
+                "duration": 200,
+                "amplifier": 2,
+                "is_ambient": true,
+                "show_particle": false,
+                "show_icon": false
+            },
+            {
+                "effect":"minecraft:resistance",
+                "duration": 200,
+                "amplifier": 1,
+                "is_ambient": true,
+                "show_particle": false,
+                "show_icon": false
+            }
+        ]
+            },
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                "type": "origins:resource",
+                "resource": "potw:demon/killer_kill_count",
+                "comparison": ">=",
+                "compare_to": 300
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "potw:demon/mode",
+                    "comparison": "==",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "interval": 100	
+        },
+    "lesserdemon":{
+        "type": "origins:action_over_time",
+          "entity_action": {
+          "type": "origins:apply_effect",
+            "effects": [{
+                "effect":"minecraft:regeneration",
+                "duration": 200,
+                "is_ambient": true,
+                "show_particle": false,
+                "show_icon": false
+              },
+              {
+                "effect":"minecraft:speed",
+                "duration": 200,
+                "is_ambient": true,
+                "show_particle": false,
+                "show_icon": false
+              }]
+            },
+        "interval": 100,
+        "condition": {
+            "type": "origins:resource",
+            "resource": "potw:demon/mode",
+            "comparison": "==",
+            "compare_to": 0
+        }
+    }
+}
