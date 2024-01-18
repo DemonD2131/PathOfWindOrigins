@@ -7,7 +7,8 @@
         "radius": 6,
         "bientity_action": {
             "type": "origins:add_velocity",
-            "z": 2.4
+            "z": 3,
+            "y": 1.1
         },
         "bientity_condition": {
             "type": "origins:target_condition",
@@ -20,6 +21,6 @@
     "hud_render": {
         "should_render": true,
 		"sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_03.png",
-		"bar_index": 16
+		"bar_index": 15
     }
 }

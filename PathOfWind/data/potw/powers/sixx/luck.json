@@ -6,14 +6,17 @@
         "type": "origins:area_of_effect",
         "radius": 6,
         "bientity_action": {
-            "type": "origins:apply_effect",
+            "type": "origins:target_action",
+            "action": {
+                "type": "origins:apply_effect",
                 "effect": {
-            "effect": "minecraft:luck",
-            "duration": 200,
-            "amplifier": 2,
-            "is_ambient": false,
-            "show_particles": false,
-            "show_icon": true
+                    "effect": "minecraft:luck",
+                    "duration": 200,
+                    "amplifier": 2,
+                    "is_ambient": false,
+                    "show_particles": false,
+                    "show_icon": true
+                }
         }
         },
         "bientity_condition": {
@@ -27,6 +30,5 @@
     },
     "interval": 100,
     "condition": {
-        "type": "origins:simple"
     }
 }

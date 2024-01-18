@@ -5,12 +5,12 @@
     "entity_action": {
         "type": "origins:apply_effect",
         "effect": {
-            "effect": "minecraft:regeneration",
+            "effect": "minecraft:resistance",
             "duration": 200,
             "amplifier": 1,
             "is_ambient": true,
             "show_particles": false,
-            "show_icon": true
+            "show_icon": false
         }
     },
     "interval": 100,

@@ -1,6 +1,7 @@
 {
   "replace": false,
   "origins": [
+    "origins:human",
     "potw:six"
   ]
 }
