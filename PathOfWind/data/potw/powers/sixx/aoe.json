@@ -7,7 +7,7 @@
         "radius": 6,
         "bientity_action": {
             "type": "origins:add_velocity",
-            "z": 3,
+            "z": 4,
             "y": 1.1
         },
         "bientity_condition": {

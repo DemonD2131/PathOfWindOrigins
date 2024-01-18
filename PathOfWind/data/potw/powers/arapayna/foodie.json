@@ -1,0 +1,49 @@
+{
+    "name": "Foodie",
+    "description": "Eat food, get resistance. Want fish, eat fish. Pufferfish, fuck your poison.",
+    "type": "origins:multiple",
+    "resistance":{
+        "type": "origins:action_on_item_use",
+        "entity_action": {
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:resistance",
+                "duration": 200,
+                "amplifier": 0,
+                "is_ambient": false,
+                "show_particles": false,
+                "show_icon": true
+            }
+        },
+        "item_condition": {
+            "type": "origins:food"
+        }
+    },
+    "rawfish":{
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient":{
+                "tag": "minecraft:fishes"
+            }
+        },
+        "food_modifier": {
+            "operation": "multiply_base",
+            "value": 2.5
+        },
+        "saturation_modifier": {
+            "operation": "multiply_base",
+            "value": 1.5
+        }
+    },
+    "detrimental":{
+        "type": "origins:modify_food",
+        "item_condition": {
+            "type": "origins:ingredient",
+            "ingredient":{
+                "tag": "potw:poisonous"
+            }
+        },
+        "prevent_effects": true
+    }
+}

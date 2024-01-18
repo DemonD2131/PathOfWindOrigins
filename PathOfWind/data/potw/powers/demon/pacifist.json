@@ -104,7 +104,7 @@
                 ]
             },
             "type": "origins:action_over_time",
-            "interval": 100,
+            "interval": 400,
             "entity_action": {
                 "type": "origins:feed",
                 "food": 2,

@@ -1,0 +1,19 @@
+{
+	"powers": [
+        "potw:arapayna/slap",
+        "potw:arapayna/riptide",
+        "potw:arapayna/foodie",
+        "potw:arapayna/breath",
+        "origins:aqua_affinity",
+        "origins:aqua_affinity_underwater",
+        "origins:aqua_affinity_undergrounded",
+        "origins:swim_speed",
+        "origins:like_water",
+        "origins:water_vision"
+	],
+	"icon": "minecraft:pufferfish",
+	"order": 10,
+	"impact": 3,
+	"name": "Arapayna",
+	"description": "A lovely day, walking in the rainforest. Take a moment to take it all in....... Why do I hear boss music?"
+}
