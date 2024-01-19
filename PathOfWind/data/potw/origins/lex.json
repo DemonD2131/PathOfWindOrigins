@@ -1,0 +1,20 @@
+{
+	"powers": [
+        "potw:lex/gust",
+        "potw:lex/windblast",
+        "potw:lex/windblasttwo",
+        "origins:slow_falling",
+        "origins:tailwind",
+        "origins:like_air",
+        "potw:lex/egg",
+        "potw:lex/energy",
+        
+        "potw:lex/windpoofs"
+        
+	],
+	"icon": "minecraft:feather",
+	"order": 10,
+	"impact": 3,
+	"name": "LexNebula",
+	"description": "Skibidi ohio rizz."
+}
