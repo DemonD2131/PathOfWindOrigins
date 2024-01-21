@@ -20,6 +20,22 @@
         }
         
     },
+    
+    "pac_count_on_kill":{
+        "type": "origins:self_action_on_kill",
+        "cooldown": 1,
+        "entity_action": {
+            "type": "origins:change_resource",
+            "resource": "potw:demon/pacifist_pac_count",
+            "change": -50
+        },
+        "condition": {
+            "type": "origins:resource",
+            "resource": "potw:demon/mode",
+            "comparison": "==",
+            "compare_to": 1
+        }
+    },
     "pac_count_evolve":{
         "type": "origins:action_over_time",
         "interval": 40,
@@ -86,9 +102,68 @@
             "compare_to": 1
         }
     },
+    "stealth":{
+        "type": "origins:invisibility",
+        "render_armor": false,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+            "type": "origins:status_effect",
+            "effect": "minecraft:invisibility",
+            "min_amplifier": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "potw:demon/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "potw:demon/pacifist_pac_count",
+                    "comparison": ">=",
+                    "compare_to": 300
+                }
+            ]
+        }
+    },
+    "stealthup":{
+        "type": "origins:action_over_time",
+        "entity_action":{
+            "type": "origins:apply_effect",
+            "effect": {
+                "effect": "minecraft:invisibility",
+                "duration": 200,
+                "amplifier": 0,
+                "show_particle": false
+            }
+        },
+        "interval": 100,
+        "condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+            "type": "origins:status_effect",
+            "effect": "minecraft:invisibility",
+            "min_amplifier": 0
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "potw:demon/mode",
+                    "comparison": "==",
+                    "compare_to": 1
+                },
+                {
+                    "type": "origins:resource",
+                    "resource": "potw:demon/pacifist_pac_count",
+                    "comparison": ">=",
+                    "compare_to": 300
+                }
+            ]
+        }
+    },
     "photosynthesis":{
-            "name": "Photosynthesis",
-            "description": "Your connection with the light brings you closer to surviving.",
             "condition": {
                 "type": "origins:and",
                 "conditions": [

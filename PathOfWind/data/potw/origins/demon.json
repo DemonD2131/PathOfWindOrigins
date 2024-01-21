@@ -8,11 +8,10 @@
         "potw:demon/no_shield",
         "potw:demon/night_vision",
         "potw:demon/nofood",
-        "origins:fall_immunity",
+        "potw:sixx/falldmg",
         "potw:demon/particles"
 	],
 	"icon": "minecraft:crimson_fungus",
-	"order": 11,
 	"impact": 3,
 	"name": "Demon",
 	"description": "From the light of heaven and the darkness of hell, two halfs will form a whole."
