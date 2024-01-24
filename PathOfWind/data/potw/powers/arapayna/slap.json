@@ -29,6 +29,11 @@
                                 {
                                     "type": "origins:damage",
                                     "amount": 5,
+                                    "source": {
+                                        "name": "magic",
+                                        "bypasses_armor": true,
+                                        "unblockable": false
+                                    },
                                     "damage_type": "minecraft:magic"
                                 }
                             ]
@@ -37,6 +42,8 @@
                 ]
                 },
                 "bientity_condition": {
+                    "type": "origins:and",
+                    "conditions": [{
                     "type": "origins:target_condition",
                     "condition": {
                         "type": "origins:and",
@@ -45,15 +52,17 @@
                                 "type": "origins:living"
                             },
                             {
-                                "type": "origins:can_see",
-                                "fluid_handling": "none"                            
-                            },
-                            {
                                 "type": "origins:submerged_in",
                                 "fluid": "minecraft:water"
                             }
                         ]
                     }
+                },
+                {
+                    "type": "origins:can_see",
+                    "fluid_handling": "none"                            
+                }
+            ]
                 }
             },
             {

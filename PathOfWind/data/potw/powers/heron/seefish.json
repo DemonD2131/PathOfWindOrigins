@@ -32,14 +32,14 @@
         },
         "condition": {
             "type": "origins:power_active",
-            "power": "potw:heron/seefish/toggle"
+            "power": "potw:heron/seefish_toggle"
         }
     },
     "input":{
         "type": "origins:active_self",
         "entity_action": {
             "type": "origins:toggle",
-            "power": "potw:heron/seefish/toggle"
+            "power": "potw:heron/seefish_toggle"
         },
         "cooldown": 20,
         "hud_render": {

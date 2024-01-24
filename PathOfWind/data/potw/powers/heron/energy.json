@@ -34,7 +34,7 @@
             "type": "origins:on_block"
         },
         "type": "origins:action_over_time",
-        "interval": 10,
+        "interval": 15,
         "entity_action": {
             "type": "origins:change_resource",
             "resource": "potw:heron/energy_resource",
