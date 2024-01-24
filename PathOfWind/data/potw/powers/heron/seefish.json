@@ -1,0 +1,52 @@
+{
+    "name": "FishFinder.com",
+    "description": "Check your dm's in a 20 block radius to locate fish.",
+    "type": "origins:multiple",
+    "toggle": {
+        "type": "origins:toggle",
+        "active_by_default": false,
+        "key": {
+            "key": "key.origins.secondary_active"
+        }
+    },
+    "glow":{
+        "type": "origins:entity_glow",
+        "bientity_condition":{
+            "type": "origins:distance",
+            "comparison": "<=",
+            "compare_to": 20
+        },
+        "entity_condition": {
+            "type": "origins:and",
+            "conditions": [
+                {
+                    "type": "origins:living"
+                },
+                {
+                    "type": "origins:fluid_height",
+                    "fluid": "minecraft:water",
+                    "comparison": ">",
+                    "compare_to": 0
+                }
+            ]
+        },
+        "condition": {
+            "type": "origins:power_active",
+            "power": "potw:heron/seefish/toggle"
+        }
+    },
+    "input":{
+        "type": "origins:active_self",
+        "entity_action": {
+            "type": "origins:toggle",
+            "power": "potw:heron/seefish/toggle"
+        },
+        "cooldown": 20,
+        "hud_render": {
+            "should_render": false
+        },
+        "key":{
+            "key": "key.origins.secondary_active"
+        }
+    }
+}

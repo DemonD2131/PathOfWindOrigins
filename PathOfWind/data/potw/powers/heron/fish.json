@@ -1,0 +1,19 @@
+{
+    "name": "Fish foodie",
+    "description": "Raw fish are your favorite snack",
+"type": "origins:modify_food",
+"item_condition": {
+    "type": "origins:ingredient",
+    "ingredient":{
+        "tag": "minecraft:fishes"
+    }
+},
+"food_modifier": {
+    "operation": "multiply_base",
+    "value": 2.5
+},
+"saturation_modifier": {
+    "operation": "multiply_base",
+    "value": 1.5
+}
+}

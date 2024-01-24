@@ -1,0 +1,15 @@
+{
+	"powers": [
+    "potw:heron/energy",
+    "potw:heron/gust",
+    "potw:heron/seefish",
+    "potw:heron/fish",
+    "origins:slow_falling",
+    "origins:tailwind",
+    "origins:like_air"
+	],
+	"icon": "minecraft:feather",
+	"impact": 3,
+	"name": "Heron",
+	"description": "Hello bird, you are homophobic and transphobic!"
+}
